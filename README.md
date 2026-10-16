@@ -11,7 +11,7 @@ You need your own Dropbox app, it's free and takes a couple of minutes:
 
 ## Installation
 
-Tell Stavrobot to install `https://github.com/vmasto/plugin-dropbox`.
+Tell Stavrobot to install `https://github.com/vmasto/stavrobot-plugin-dropbox`.
 
 ## Configuration
 
