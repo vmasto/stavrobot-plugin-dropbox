@@ -157,6 +157,19 @@ def content_headers(arg: dict) -> dict:
     }
 
 
+def read_input(value) -> tuple[str, bytes]:
+    """Read a file parameter and return its name and bytes."""
+    path = Path(value)
+    if not path.is_file():
+        raise ToolError("file was not found.")
+    data = path.read_bytes()
+    # The plugin-runner puts input files in OUTPUT_DIR and sends back whatever is
+    # left there, so remove the input to keep it from coming back as an output.
+    if path.resolve().parent == OUTPUT_DIR.resolve():
+        path.unlink()
+    return path.name, data
+
+
 def normalize_path(value, name: str = "path", allow_root: bool = False) -> str:
     if value is None or (isinstance(value, str) and not value.strip()):
         if allow_root:

@@ -17,10 +17,7 @@ def main(params: dict) -> dict:
     if bool(source) == (text is not None):
         raise dbx.ToolError("Give exactly one of file or text.")
     if source:
-        source = Path(source)
-        if not source.is_file():
-            raise dbx.ToolError("file was not found.")
-        data = source.read_bytes()
+        _, data = dbx.read_input(source)
     elif isinstance(text, str):
         data = text.encode()
     else:

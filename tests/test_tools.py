@@ -184,11 +184,14 @@ def test_upload_text_without_overwrite_autorenames(fake):
 
 
 def test_upload_file_with_overwrite(fake, tmp_path):
-    source = tmp_path / "photo.jpg"
+    # The plugin-runner puts input files in OUTPUT_DIR, so the tool must remove them.
+    dbx.OUTPUT_DIR.mkdir()
+    source = dbx.OUTPUT_DIR / "photo.jpg"
     source.write_bytes(b"jpg")
     fake.routes["files/upload"] = Response(200, file_entry("photo.jpg", 3))
     out = tool("upload")({"path": "/photo.jpg", "file": str(source), "overwrite": True})
-    assert "renamed" not in out
+    assert "renamed" not in out and not source.exists()
+    assert fake.calls[-1]["data"] == b"jpg"
     assert json.loads(fake.calls[-1]["headers"]["Dropbox-API-Arg"])["mode"] == "overwrite"
 
 
