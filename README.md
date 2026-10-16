@@ -1,4 +1,4 @@
-# Dropbox
+# Dropbox plugin
 
 Lets Stavrobot browse, search, download and save files in your Dropbox.
 
@@ -9,9 +9,9 @@ You need your own Dropbox app, it's free and takes a couple of minutes:
 1. Create one at https://www.dropbox.com/developers/apps with Scoped access. App folder limits the bot to `/Apps/<app name>`, Full Dropbox gives it everything.
 2. On the Permissions tab enable `files.metadata.read`, `files.content.read`, `files.content.write`, `sharing.read` and `sharing.write`, then Submit. Do this before connecting, since a token only gets the scopes that were enabled when it was issued.
 
-## Installing
+## Installation
 
-Tell Stavrobot to install `https://github.com/vmasto/stavrobot-dropbox-plugin`.
+Tell Stavrobot to install `https://github.com/vmasto/plugin-dropbox`.
 
 ## Configuration
 
@@ -30,3 +30,7 @@ Tell Stavrobot to install `https://github.com/vmasto/stavrobot-dropbox-plugin`.
 - `get_link`: a shared link, or a direct download link that expires in 4 hours. Anyone with a shared link can open the file.
 
 The 25 MB limit comes from Stavrobot's plugin runner, not Dropbox. You can turn off any tool, `delete` for example, on the plugins settings page.
+
+## License
+
+GNU Affero General Public License, version 3. See [LICENSE](LICENSE).
