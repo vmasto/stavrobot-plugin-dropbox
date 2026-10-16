@@ -1,0 +1,19 @@
+{
+  "name": "list_folder",
+  "description": "List a folder. Folders come back as type folder, files with size and modified time (UTC).",
+  "entrypoint": "run.py",
+  "parameters": {
+    "path": {
+      "type": "string",
+      "description": "Folder path, e.g. /Photos. Omit or use / for the root."
+    },
+    "recursive": {
+      "type": "boolean",
+      "description": "Include everything below the folder. Default false."
+    },
+    "limit": {
+      "type": "integer",
+      "description": "Maximum entries to return, 1 to 500. Default 100."
+    }
+  }
+}

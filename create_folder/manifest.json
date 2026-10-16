@@ -1,0 +1,11 @@
+{
+  "name": "create_folder",
+  "description": "Create a folder. Missing parent folders are created too.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "path": {
+      "type": "string",
+      "description": "Path of the new folder, e.g. /Projects/2026."
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "auth_complete",
+  "description": "Step 2 of connecting Dropbox. Exchanges the code from auth_url's page for a refresh token and saves it. Codes expire within minutes and work once.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "code": {
+      "type": "string",
+      "description": "The code Dropbox showed after the user allowed access."
+    }
+  }
+}

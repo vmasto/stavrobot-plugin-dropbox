@@ -1,0 +1,11 @@
+{
+  "name": "get_metadata",
+  "description": "Details of one file or folder: type, name, path, id, and for files size and modified times (UTC).",
+  "entrypoint": "run.py",
+  "parameters": {
+    "path": {
+      "type": "string",
+      "description": "Path or id (id:...) of the file or folder."
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "move",
+  "description": "Move or rename a file or folder. Fails if something already exists at to_path.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "from_path": {
+      "type": "string",
+      "description": "Current path or id (id:...)."
+    },
+    "to_path": {
+      "type": "string",
+      "description": "New path, including the name."
+    }
+  }
+}

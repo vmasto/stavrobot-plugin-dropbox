@@ -1,0 +1,15 @@
+{
+  "name": "get_link",
+  "description": "Get a link to a file or folder. By default a shared link: anyone who has it can open the item, so confirm before sending it to someone. With temporary, a direct download link to a file that expires in 4 hours.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "path": {
+      "type": "string",
+      "description": "Path or id (id:...)."
+    },
+    "temporary": {
+      "type": "boolean",
+      "description": "Temporary direct download link instead, files only. Default false."
+    }
+  }
+}

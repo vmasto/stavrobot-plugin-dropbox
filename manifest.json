@@ -1,0 +1,20 @@
+{
+  "name": "dropbox",
+  "description": "Browse, search, download and save files in the user's Dropbox.",
+  "summary": "Browse, search and manage files in Dropbox",
+  "instructions": "1. Create an app at https://www.dropbox.com/developers/apps with Scoped access. Pick App folder to limit Stavrobot to /Apps/<app name>, or Full Dropbox.\n2. On the app's Permissions tab enable files.metadata.read, files.content.read, files.content.write, sharing.read and sharing.write, then Submit. Do this before connecting, a token only gets the scopes enabled when it was issued.\n3. Set app_key and app_secret from the app's Settings tab.\n4. Ask Stavrobot to connect Dropbox. It sends you a link, you allow access and paste back the code Dropbox shows.",
+  "config": {
+    "app_key": {
+      "description": "App key, from the Settings tab of your app in the Dropbox App Console.",
+      "required": true
+    },
+    "app_secret": {
+      "description": "App secret, from the same Settings tab.",
+      "required": true
+    },
+    "refresh_token": {
+      "description": "Set by the auth_complete tool, no need to fill it in.",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "download",
+  "description": "Download a file so you receive it as an attachment. Files only, up to 25 MB. For bigger files or folders use get_link.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "path": {
+      "type": "string",
+      "description": "Path or id (id:...) of the file."
+    }
+  }
+}

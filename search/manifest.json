@@ -1,0 +1,23 @@
+{
+  "name": "search",
+  "description": "Search file and folder names, and the contents of documents Dropbox indexes.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "query": {
+      "type": "string",
+      "description": "What to search for."
+    },
+    "path": {
+      "type": "string",
+      "description": "Only search inside this folder. Default: the whole Dropbox."
+    },
+    "filename_only": {
+      "type": "boolean",
+      "description": "Match names only, not contents. Default false."
+    },
+    "max_results": {
+      "type": "integer",
+      "description": "1 to 100. Default 20."
+    }
+  }
+}

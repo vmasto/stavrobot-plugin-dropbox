@@ -1,0 +1,6 @@
+{
+  "name": "auth_url",
+  "description": "Step 1 of connecting Dropbox. Returns a URL for the user to open. After they allow access, Dropbox shows a code: pass it to auth_complete.",
+  "entrypoint": "run.py",
+  "parameters": {}
+}

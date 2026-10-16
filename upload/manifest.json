@@ -1,0 +1,23 @@
+{
+  "name": "upload",
+  "description": "Save a file to Dropbox. Pass either file (an attachment) or text. Up to 25 MB. Without overwrite, an existing file is kept and the new one gets a numbered name.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "path": {
+      "type": "string",
+      "description": "Destination path including the file name, e.g. /Documents/notes.txt."
+    },
+    "file": {
+      "type": "file",
+      "description": "The file to upload."
+    },
+    "text": {
+      "type": "string",
+      "description": "Text to save as the file's content, instead of file."
+    },
+    "overwrite": {
+      "type": "boolean",
+      "description": "Replace a file already at path. Default false."
+    }
+  }
+}

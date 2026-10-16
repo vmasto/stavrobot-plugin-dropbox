@@ -1,0 +1,11 @@
+{
+  "name": "delete",
+  "description": "Delete a file or folder, folders with everything inside. Confirm with the user first. Deleted items can be restored from Deleted files on dropbox.com for a while.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "path": {
+      "type": "string",
+      "description": "Path or id (id:...) to delete."
+    }
+  }
+}
