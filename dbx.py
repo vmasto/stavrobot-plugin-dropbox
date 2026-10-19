@@ -1,6 +1,7 @@
 """Shared Dropbox client for the plugin's tools."""
 
 import json
+import os
 import sys
 import time
 from pathlib import Path
@@ -9,7 +10,8 @@ import requests
 
 PLUGIN_ROOT = Path(__file__).resolve().parent
 CONFIG_PATH = PLUGIN_ROOT / "config.json"
-OUTPUT_DIR = Path("/tmp/dropbox")
+# Stavrobot gives each run its own directory; older runners used /tmp/<plugin>.
+OUTPUT_DIR = Path(os.environ.get("STAVROBOT_TEMP_DIR", "/tmp/dropbox"))
 
 AUTHORIZE_URL = "https://www.dropbox.com/oauth2/authorize"
 TOKEN_URL = "https://api.dropboxapi.com/oauth2/token"
